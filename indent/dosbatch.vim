@@ -35,9 +35,10 @@ function! GetDosBatchIndent(lnum)
 
   let l:ind = l:previ
 
-  if l:prevl =~? '^\s*if\>.*(' ||
-	\ l:prevl =~? '\<do\>\s*(' ||
-	\ l:prevl =~? '\<else\>\s*\%(if\>.*\)\?('
+  if l:prevl =~? '^\s*@\=if\>.*(\s*$' ||
+        \ l:prevl =~? '\<do\>\s*(\s*$' ||
+        \ l:prevl =~? '\<else\>\s*\%(if\>.*\)\?(\s*$' ||
+        \ l:prevl =~? '^.*\(&&\|||\)\s*(\s*$'
     " previous line opened a block
     let l:ind += shiftwidth()
   endif
