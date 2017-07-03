@@ -29,7 +29,7 @@ function! GetDosBatchIndent(lnum)
   endif
 
   " grab the previous and current line, stripping comments.
-  let l:prevl = substitute(getline(l:prevlnum), '\c^@\?rem\>.*$', '', '')
+  let l:prevl = substitute(getline(l:prevlnum), '\c^\s*\%(@\s*\)\?rem\>.*$', '', '')
   let l:thisl = getline(a:lnum)
   let l:previ = indent(l:prevlnum)
 
