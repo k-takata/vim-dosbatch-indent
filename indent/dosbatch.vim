@@ -21,6 +21,9 @@ if exists("*GetDosBatchIndent")
   finish
 endif
 
+let s:cpo_save = &cpo
+set cpo&vim
+
 function! GetDosBatchIndent(lnum)
   let l:prevlnum = prevnonblank(a:lnum-1)
   if l:prevlnum == 0
@@ -49,5 +52,8 @@ function! GetDosBatchIndent(lnum)
 
   return l:ind
 endfunction
+
+let &cpo = s:cpo_save
+unlet s:cpo_save
 
 " vim: ts=8 sw=2 sts=2
