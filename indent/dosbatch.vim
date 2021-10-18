@@ -17,6 +17,8 @@ setlocal indentexpr=GetDosBatchIndent(v:lnum)
 setlocal indentkeys=!^F,o,O
 setlocal indentkeys+=0=)
 
+let b:undo_indent = "setl ai< inde< indk< si<"
+
 if exists("*GetDosBatchIndent")
   finish
 endif
