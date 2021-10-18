@@ -2,7 +2,7 @@
 " Language:	MSDOS batch file (with NT command extensions)
 " Maintainer:	Ken Takata
 " URL:		https://github.com/k-takata/vim-dosbatch-indent
-" Last Change:	2017 May 10
+" Last Change:	2021-10-18
 " Filenames:	*.bat
 " License:	VIM License
 
